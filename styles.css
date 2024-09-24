@@ -153,12 +153,20 @@ h1 {
     .slider-wrapper {
         margin: 0;
     }
-
+    .slider-wrapper .card-list{
+        width: 50%; /* Reduce width for mobile */
+        padding: 10px; /* Add padding for spacing */
+    }
 
     .slider-wrapper .swiper-slide-button {
         display: none;
     }
-
+    .slider-wrapper .swiper-pagination-bullet {
+        background: #c3ff00;
+        height: 15px;
+        width: 15px;
+        margin-top: 0;
+        }
 
     .small-image {
         max-width: 150px;  /* Set the maximum width for the image */
@@ -167,12 +175,28 @@ h1 {
         justify-self: center;
     
     }
-
-    .swiper-slide {
-        width: 50%;  /* Each slide takes full width */
-        height: 50%; /* Each slide takes full height */
+    .slider-wrapper {
+        max-width: 100%; /* Make the slider take full width */
+        margin: 0 10px 40px; /* Adjust margins */
     }
-
+    .slider-wrapper .card-lists .card-item{
+        width: 50%;  /* Each slide takes full width */
+        height: 50%; 
+        margin: 40px;
+    }
+    .message-button {
+        padding: 5px 10px; /* Reduce button padding */
+        font-size: 1rem; /* Make button font size smaller */
+    }
+    
+    .card-list .card-item {
+        padding: 10px; /* Reduce padding */
+        font-size: 0.8rem; /* Make font size smaller */
+    }
+    .card-list .card-item .user-image {
+        width: 100px; /* Make user image smaller */
+        height: 100px;
+    }
     }
 
 
