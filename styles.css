@@ -218,11 +218,6 @@ h1 {
         }
     
         /* Ensuring only one card shows fully in the viewport */
-        .swiper-slide {
-            width: 90% !important; /* Ensure the slide takes full width */
-            flex-shrink: 0;
-            margin: 0 auto;
-        }
     
         /* Adjusting card item appearance */
         .card-item {
