@@ -149,9 +149,9 @@ h1 {
         max-height: none;  /* Remove any height restrictions */
         margin-bottom: 20px;  /* Add space between the sections */
     }
-    
+
     .slider-wrapper {
-        margin: 0 10px 40px;
+        margin: 0;
     }
 
 
