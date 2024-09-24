@@ -219,24 +219,26 @@ h1 {
     
         /* Ensuring only one card shows fully in the viewport */
         .swiper-slide {
-            width: 100% !important; /* Ensure the slide takes full width */
+            width: 90% !important; /* Ensure the slide takes full width */
             flex-shrink: 0;
+            margin: 0 auto;
         }
     
         /* Adjusting card item appearance */
         .card-item {
-            padding: 10px; /* Reduce padding to fit better on small screens */
+            padding: 20px; /* Reduce padding to fit better on small screens */
+            box-sizing: border-box;
         }
     
         /* Adjusting user images */
         .card-item .user-image {
-            width: 100px;  /* Reduce image size for small screens */
-            height: 100px; /* Keep aspect ratio */
+            width: 120px;  /* Reduce image size for small screens */
+            height: 120px; /* Keep aspect ratio */
         }
     
         /* Adjusting text size and spacing */
         .user-name, .user-profession {
-            font-size: 1.2rem; /* Smaller text for smaller screens */
+            font-size: 1.5rem; /* Smaller text for smaller screens */
             text-align: center; /* Center text for better mobile readability */
         }
     
@@ -252,6 +254,7 @@ h1 {
         }
     
         .small-image {
+            display: block;
             max-width: 100px; /* Reduce image size in paragraph */
             margin: 0 auto 20px; /* Center image with margin */
         }
