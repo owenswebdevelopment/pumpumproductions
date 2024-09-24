@@ -1,0 +1,167 @@
+/*Importing Goolge fonts - Roboto*/
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+</style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    background: url("images/background.jpeg") no-repeat;
+    background-size: cover;
+    color: #f5f5f5;
+    overflow: scroll;
+}
+
+.paragraph-container {
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+align-items: start;
+    max-height: 100vh;
+    padding: 10px;
+}
+.paragraph-container .description {
+    padding: 10px;
+}
+.paragraph {
+    padding: 10px;
+}
+
+.small-image {
+    max-width: 150px;  /* Set the maximum width for the image */
+    height: auto;  
+    margin-top: 80px;    /* Maintain aspect ratio */
+    justify-self: center;
+
+}
+
+.container .header-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #c3ff00;
+    margin-top: 40px;
+}
+.slider-wrapper {
+    width: 100%;  /* Set to 100% */
+    height: 100%; /* Set to 100% */
+    overflow: hidden;
+    max-width: 1300px;
+    margin: 70px 70px 55px 70px;
+}
+.card-list .card-item {
+    color: #fff;
+    user-select: none;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 20px;
+    background: rgba(203, 200, 200, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+}
+.card-list .card-item .user-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    margin-bottom: 40px;
+    border: 3px solid white;
+    padding: 3px;
+}
+.card-list .card-item .user-image img {
+    width: 100%;  /* Ensure the image fills the container */
+    height: 100%; /* Ensure the image fills the container */
+    object-fit: cover; /* Ensure the image maintains proper aspect ratio */
+    border-radius: 50%; /* Apply circular shape */
+}
+.card-list .card-item .user-profession {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 14px 0px 40px;
+}
+
+.card-list .card-item .message-button {
+    padding: 10px 20px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #161515;
+    cursor: pointer;
+    background: white;
+    border: 1px solid transparent;
+    transition: 0.2 ease-in;
+}
+
+.card-list .card-item .message-button:hover {
+    background: rgb(129, 130, 130);
+    border: 1px solid white;
+    color: white;
+}
+
+.slider-wrapper .swiper-pagination-bullet {
+    background: #c3ff00;
+    height: 15px;
+    width: 15px;
+}
+.card-list .card-item img {
+    
+}
+
+.slider-wrapper .swiper-slide-button {
+    color: #fff;
+    margin-top: 180px;
+}
+
+
+.slider-wrapper .swiper-slide-button {
+    color: #fff;
+    transition: 1s ease-in;
+}
+
+.slider-wrapper .swiper-slide-button {
+    color:#c3ff00;
+}
+
+@media (max-width: 768px){
+    .slider-wrapper {
+        margin: 0 10px 40px;
+    }
+
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+    }
+
+
+    .small-image {
+        max-width: 150px;  /* Set the maximum width for the image */
+        height: auto;  
+        margin-top: 100px;    /* Maintain aspect ratio */
+        justify-self: center;
+    
+    }
+
+    .swiper-slide {
+        width: 50%;  /* Each slide takes full width */
+        height: 50%; /* Each slide takes full height */
+    }
+
+    }
+
+
