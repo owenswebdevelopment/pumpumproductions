@@ -156,6 +156,7 @@ h1 {
     .slider-wrapper .card-list{
         width: 50%; /* Reduce width for mobile */
         padding: 10px; /* Add padding for spacing */
+        margin-bottom: 15px; /* Add padding for*/
     }
 
     .slider-wrapper .swiper-slide-button {
@@ -188,10 +189,10 @@ h1 {
         padding: 5px 10px; /* Reduce button padding */
         font-size: 1rem; /* Make button font size smaller */
     }
-    
+
     .card-list .card-item {
-        padding: 10px; /* Reduce padding */
-        font-size: 0.8rem; /* Make font size smaller */
+        padding: 10px; 
+         / /* Reduce padding */
     }
     .card-list .card-item .user-image {
         width: 100px; /* Make user image smaller */
