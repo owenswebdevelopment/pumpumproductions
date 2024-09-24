@@ -252,6 +252,11 @@ h1 {
             font-size: 1rem; /* Adjust paragraph text size for better readability */
             padding: 0 10px;
         }
+
+      .card-list .card-item {
+        margin-bottom: 20px;
+      }
+
     }
     
 
