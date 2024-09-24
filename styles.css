@@ -212,33 +212,22 @@ h1 {
     @media (max-width: 430px) {
         /* Adjusting slider wrapper for small screens */
         .slider-wrapper {
-            max-width:fit-content; /* Ensure the slider fits the viewport */
+            max-width: 100%; /* Ensure the slider fits the viewport */
             padding: 0; /* Remove extra padding */
-            margin: 0; /* No margins to ensure it fits properly */
+            margin: 0 auto; /* No margins to ensure it fits properly */
         }
     
         /* Ensuring only one card shows fully in the viewport */
-        .swiper-slide {
-            width: 100% !important; /* Ensure the slide takes full width */
-            flex-shrink: 0;
-            margin: 0 auto;
-        }
-    
-        /* Adjusting card item appearance */
-        .card-item {
-            padding: 20px; /* Reduce padding to fit better on small screens */
+        .card-list .card-item {
+            padding: 10px 0 20px 20px;
             box-sizing: border-box;
+            justify-content: center;
         }
-    
-        /* Adjusting user images */
-        .card-item .user-image {
-            width: 120px;  /* Reduce image size for small screens */
-            height: 120px; /* Keep aspect ratio */
-        }
+       
     
         /* Adjusting text size and spacing */
         .user-name, .user-profession {
-            font-size: 1.5rem; /* Smaller text for smaller screens */
+            font-size: 1.4rem; /* Smaller text for smaller screens */
             text-align: center; /* Center text for better mobile readability */
         }
     
