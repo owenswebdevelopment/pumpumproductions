@@ -26,6 +26,7 @@ const swiper = new Swiper('.slider-wrapper', {
           768: {
             slidesPerView: 1,
             spaceBetween: 50,
+            centeredSlides: true,
     
           },
     

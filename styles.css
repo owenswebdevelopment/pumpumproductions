@@ -45,6 +45,7 @@ align-items: start;
 
 }
 
+
 .container .header-container {
     width: 100%;
     text-align: center;
@@ -56,19 +57,28 @@ h1 {
     color: #c3ff00;
     margin-top: 40px;
 }
+
+.container {
+    width: 100vw; /* Ensure container takes full width */
+    overflow: hidden; /* Prevent content overflow */
+}
 .slider-wrapper {
+    display: flex;
     width: 100%;  /* Set to 100% */
     height: 100%; /* Set to 100% */
     overflow: hidden;
     max-width: 1300px;
     margin: 70px 70px 55px 70px;
 }
+
 .card-list .card-item {
     color: #fff;
     user-select: none;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction:column;
     align-items: center;
+    width: 100%;
     padding: 20px;
     background: rgba(203, 200, 200, 0.2);
     border-radius: 10px;
@@ -141,9 +151,7 @@ h1 {
 
 @media (max-width: 768px){
 
-    .container {
-        display: block;  /* Stack everything vertically on mobile */
-    }
+
     .paragraph-container, .slider-wrapper {
         width: 100%;  /* Ensure full width */
         max-height: none;  /* Remove any height restrictions */
@@ -200,4 +208,58 @@ h1 {
     }
     }
 
+
+    @media (max-width: 430px) {
+        /* Adjusting slider wrapper for small screens */
+        .slider-wrapper {
+            max-width: 100%; /* Ensure the slider fits the viewport */
+            padding: 0; /* Remove extra padding */
+            margin: 0; /* No margins to ensure it fits properly */
+        }
+    
+        /* Ensuring only one card shows fully in the viewport */
+        .swiper-slide {
+            width: 100% !important; /* Ensure the slide takes full width */
+            flex-shrink: 0;
+        }
+    
+        /* Adjusting card item appearance */
+        .card-item {
+            padding: 10px; /* Reduce padding to fit better on small screens */
+        }
+    
+        /* Adjusting user images */
+        .card-item .user-image {
+            width: 100px;  /* Reduce image size for small screens */
+            height: 100px; /* Keep aspect ratio */
+        }
+    
+        /* Adjusting text size and spacing */
+        .user-name, .user-profession {
+            font-size: 1.2rem; /* Smaller text for smaller screens */
+            text-align: center; /* Center text for better mobile readability */
+        }
+    
+        .message-button {
+            padding: 8px 15px; /* Smaller button padding */
+            font-size: 1rem;    /* Smaller button text */
+        }
+    
+        /* Adjusting paragraph container */
+        .paragraph-container {
+            display: block; /* Stack the paragraph and image on top of each other */
+            padding: 10px;
+        }
+    
+        .small-image {
+            max-width: 100px; /* Reduce image size in paragraph */
+            margin: 0 auto 20px; /* Center image with margin */
+        }
+    
+        .paragraph {
+            font-size: 1rem; /* Adjust paragraph text size for better readability */
+            padding: 0 10px;
+        }
+    }
+    
 
