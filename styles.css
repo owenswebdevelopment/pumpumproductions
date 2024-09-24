@@ -227,7 +227,7 @@ h1 {
     
         /* Adjusting card item appearance */
         .card-item {
-            padding: 20px; /* Reduce padding to fit better on small screens */
+            padding: 10px; /* Reduce padding to fit better on small screens */
             box-sizing: border-box;
         }
     
