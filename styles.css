@@ -140,9 +140,20 @@ h1 {
 }
 
 @media (max-width: 768px){
+
+    .container {
+        display: block;  /* Stack everything vertically on mobile */
+    }
+    .paragraph-container, .slider-wrapper {
+        width: 100%;  /* Ensure full width */
+        max-height: none;  /* Remove any height restrictions */
+        margin-bottom: 20px;  /* Add space between the sections */
+    }
+    
     .slider-wrapper {
         margin: 0 10px 40px;
     }
+
 
     .slider-wrapper .swiper-slide-button {
         display: none;
