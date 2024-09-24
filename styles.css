@@ -220,7 +220,7 @@ h1 {
         /* Ensuring only one card shows fully in the viewport */
         .swiper-slide {
             width: 50% !important; /* Ensure the slide takes full width */
-            flex-shrink: 1;
+            flex-shrink: 0;
             margin: 0 auto;
         }
     
