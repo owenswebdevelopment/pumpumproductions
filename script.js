@@ -36,3 +36,19 @@ const swiper = new Swiper('.slider-wrapper', {
         }
 
   });
+//js to change light mode to dark mode
+  const body = document.querySelector("body"),
+  nav = document.querySelector("nav"),
+  darkLightToggle = document.querySelector(".dark-light"),
+  searchBoxToggle = document.querySelector(".searchBox");
+
+
+  darkLightToggle.addEventListener("click", ()=> {
+    darkLightToggle.classList.toggle("active");
+    body.classList.toggle("dark");
+
+  }),
+
+ searchBoxToggle.addEventListener("click", ()=> {
+    searchBoxToggle.classList.toggle("active");
+  })
