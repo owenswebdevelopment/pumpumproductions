@@ -44,7 +44,7 @@ body.dark {
     --logo-color: rgb(255, 255, 255);      /* Logo color */
     --slide-color: rgb(255, 255, 255);     /* Slide background color */
     --search-text-color: rgb(240, 240, 240);  /* Search text color */
-    --dots-icon-color: rgb(255, 255, 255);  /* dots bgk color */
+    --dots-icon-color: rgb(230, 236, 228);  /* dots bgk color */
     --mode--switch-icons-color: rgb(179, 179, 179);  /* switch icons color */
     --hover--button-color: rgb(130, 127, 127);  /* button hover text color */
     --h1--text-color: rgb(255, 255, 255);  /* h1 text color */
@@ -177,6 +177,72 @@ pointer-events: auto;
 opacity: 0;
 pointer-events: auto;
 }
+
+.searchToggle {
+  position: relative;  
+}
+
+
+
+.searchToggle .search-field {
+    position: absolute;
+    bottom: -80px;
+    right: 8px;
+    background-color: var(--nav-color);
+    height: 40px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    padding: 3px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.searchBox.active .search-field {
+    bottom: -70px;
+    opacity: 1;    
+    pointer-events: auto;
+    }
+
+.search-field input {
+height: 100%;
+width: 100%;
+padding: 0 45px 0 15px;
+outline: none;
+border: none;
+border-radius: 6px;
+color: var(--search-text-color);
+font-size: 16px;
+font-weight: 500;
+}
+
+
+
+.search-field::before {
+content: '';
+position:absolute;
+right: 16px;
+top: -4px;
+height: 26px;
+width: 26px;
+background-color: var(--nav-color);
+transform: rotate(-45deg);
+z-index: -1;
+
+}
+
+.search-field i {
+    position: absolute;
+    color: var(--search-text-color);
+    right: 18px;
+    font-size: 21px;
+    cursor: pointer;
+    }
+    
+
 
 .paragraph-container {
     display:grid;
