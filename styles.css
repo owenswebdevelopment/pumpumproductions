@@ -11,7 +11,7 @@
 }
 :root {
     --nav-color: rgb(195, 255, 0);       /* Navigation bar color */
-    --side-nav: rgb(9, 33, 11);            /* Side navigation color */
+    --side-nav: rgb(0, 0, 0);            /* Side navigation color */
     --text-color: #ffffff;                 /* Text color */
     --logo-color: rgb(238, 127, 127);      /* Logo color */
     --slide-color: rgb(255, 255, 255);     /* Slide background color */
@@ -55,7 +55,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    height: 60px;
+    height: 70px;
     width: 100%;
     z-index: 1000; /* High z-index so it stays above other content */
    
@@ -67,7 +67,7 @@ nav {
         width: 100%;
         max-width: none;
         background-color: var(--nav-color);
-        padding: 0 70px;
+        padding: 0 60px;
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -78,26 +78,29 @@ nav {
         display: flex;
         align-items: center;
         max-width: 100%;
+        padding-right: 9rem;
     }
 
     nav .nav-bar .logo a {
 text-decoration: none;
-font-size: 19px;
-font-weight: 700;
-color: var(--dots-icon-color);
+font-size: 25px;
+font-weight: 900;
+color: var(--mode--switch-icons-color);
     } 
     
     .nav-bar .nav-links li {
         list-style: none;
         margin: 0 5px;
+        padding: 10px;
     }
     
     .nav-bar .nav-links a {
         font-size: 17px;
-        font-weight: 500;
+        font-weight: 600;
         position: relative;
        text-decoration: none;
        padding: 10px;
+       color: var(--mode--switch-icons-color);
     }
     .nav-links li a::before {
       content: '';
@@ -119,12 +122,14 @@ color: var(--dots-icon-color);
    
 
 .nav-bar .darkLight-searchBox {
+    position: absolute;
     display: flex;
     align-items: center;
+    right: 14px;
+    top: 24%;
 }
 
 .darkLight-searchBox .dark-light, .searchBox {
-    background-color:var(--mode--switch-icons-color);
     height: 40px;
     width: 40px;
     padding: 0 10px;
@@ -138,7 +143,7 @@ color: var(--dots-icon-color);
 
 .dark-light i, .searchBox i {
 position: absolute;
-color:var(--nav-color);
+color:var(--mode--switch-icons-color);
 font-size: 20px;
 cursor: pointer;
 transition: all o.3s ease;
@@ -195,16 +200,15 @@ pointer-events: auto;
     align-items: center;
     padding: 3px;
     border-radius: 6px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     opacity: 0;
     pointer-events: none;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in;
 }
 
 .searchBox.active .search-field {
     bottom: -70px;
-    opacity: 1;    
-    pointer-events: auto;
+    opacity: 1; 
+    pointer-events: auto;   
     }
 
 .search-field input {
@@ -214,12 +218,11 @@ padding: 0 45px 0 15px;
 outline: none;
 border: none;
 border-radius: 6px;
-color: var(--search-text-color);
+color: var(--text-color);
 font-size: 16px;
 font-weight: 500;
+background-color: var(--side-nav);
 }
-
-
 
 .search-field::before {
 content: '';
@@ -481,4 +484,22 @@ h1 {
 
     }
     
+@media (max-width: 768px) {
+    .menu {
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        top: 0;
+        left: 0;
+        background-color: var(--side-nav);
+    }
+    .nav-bar .nav-links {
+        flex-direction: column;
+        padding-top: 6px;
+    }
+    .nav-links li a {
+        display: block;
+        margin-top: 20px;
+    }
+}
 

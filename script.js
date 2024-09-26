@@ -47,8 +47,12 @@ const swiper = new Swiper('.slider-wrapper', {
     darkLightToggle.classList.toggle("active");
     body.classList.toggle("dark");
 
-  }),
+  });
 
  searchBoxToggle.addEventListener("click", ()=> {
     searchBoxToggle.classList.toggle("active");
-  })
+  
+  });
+  
+
+  
