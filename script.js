@@ -40,9 +40,11 @@ const swiper = new Swiper('.slider-wrapper', {
   const body = document.querySelector("body"),
   nav = document.querySelector("nav"),
   darkLightToggle = document.querySelector(".dark-light"),
-  searchBoxToggle = document.querySelector(".searchBox");
+  searchBoxToggle = document.querySelector(".searchBox"),
+  sidebarClose = document.querySelector(".sidebarOpen"),
+  sidebarOpen = document.querySelector(".sidebarClose");
 
-
+  
   darkLightToggle.addEventListener("click", ()=> {
     darkLightToggle.classList.toggle("active");
     body.classList.toggle("dark");
@@ -55,4 +57,7 @@ const swiper = new Swiper('.slider-wrapper', {
   });
   
 
-  
+  // js code to toggle sidebar
+  sidebarOpen.addEventListener("click", ()=> {
+    nav.classList.toggle("active");
+  })

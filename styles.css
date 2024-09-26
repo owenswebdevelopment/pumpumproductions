@@ -17,7 +17,7 @@
     --slide-color: rgb(255, 255, 255);     /* Slide background color */
     --search-text-color: rgb(42, 35, 35);  /* Search text color */
     --dots-icon-color: rgb(251, 31, 31);  /* dots bgk color */
-    --mode--switch-icons-color: rgb(68, 63, 63);  /* switch icons color */
+    --mode--switch-icons-color: rgb(133, 124, 124);  /* switch icons color */
     --hover--button-color: rgb(130, 127, 127);  /* button hover text color */
     --h1--text-color: rgb(86, 251, 31);  /* h1 text color */
 }
@@ -39,7 +39,7 @@ body {
 
 body.dark {
     --nav-color: rgb(0, 0, 0);       /* Navigation bar color */
-    --side-nav: rgb(87, 91, 87);            /* Side navigation color */
+    --side-nav: rgb(2, 2, 2);            /* Side navigation color */
     --text-color: #ffffff;                 /* Text color */
     --logo-color: rgb(255, 255, 255);      /* Logo color */
     --slide-color: rgb(255, 255, 255);     /* Slide background color */
@@ -74,6 +74,17 @@ nav {
         justify-content: space-between;
         box-sizing: border-box;
     }
+
+    nav .nav-bar .sidebarOpen {
+color: var(--dots-icon-color);
+font-size: 25px;
+padding: 6px;
+cursor: pointer;
+display: none;
+
+    }
+
+
     .nav-bar .nav-links {
         display: flex;
         align-items: center;
@@ -88,6 +99,9 @@ font-weight: 900;
 color: var(--mode--switch-icons-color);
     } 
     
+    .menu .logo-toggle {
+      display: none;
+            }   
     .nav-bar .nav-links li {
         list-style: none;
         margin: 0 5px;
@@ -141,6 +155,7 @@ color: var(--mode--switch-icons-color);
     justify-content: center;
 }
 
+menu 
 .dark-light i, .searchBox i {
 position: absolute;
 color:var(--mode--switch-icons-color);
@@ -485,17 +500,43 @@ h1 {
     }
     
 @media (max-width: 768px) {
+    nav .nav-bar .sidebarOpen {
+        display: block;
+           }
+   
     .menu {
         position: fixed;
         height: 100%;
         width: 320px;
         top: 0;
-        left: 0;
+        left: -100%;
         background-color: var(--side-nav);
+        padding: 20px;
+        z-index: 100;
     }
+
+.menu .logo-toggle {
+    display: contents;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+    }
+
+.logo-toggle .sidebarClose {
+    color: var(--mode--switch-icons-color);
+    font-size: 24px;
+    cursor: pointer;
+            }
+
+.logo-toggle.active .sidebarClose{
+opacity: 1;
+pointer-events: auto;
+}    
+
     .nav-bar .nav-links {
         flex-direction: column;
-        padding-top: 6px;
+        padding-top: 30px;
     }
     .nav-links li a {
         display: block;
@@ -504,6 +545,10 @@ h1 {
 }
 
 @media (max-width: 430px) {
+    nav .nav-bar .sidebarOpen {
+        display: block;
+           }
+
     .menu {
         position: fixed;
         height: 100%;
