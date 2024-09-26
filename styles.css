@@ -76,11 +76,11 @@ nav {
     }
 
     nav .nav-bar .sidebarOpen {
-color: var(--dots-icon-color);
-font-size: 25px;
-padding: 6px;
-cursor: pointer;
-display: none;
+    color: var(--dots-icon-color);
+    font-size: 25px;
+    padding: 6px;
+    cursor: pointer;
+    display: none;
 
     }
 
@@ -93,10 +93,10 @@ display: none;
     }
 
     nav .nav-bar .logo a {
-text-decoration: none;
-font-size: 25px;
-font-weight: 900;
-color: var(--mode--switch-icons-color);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--mode--switch-icons-color);
     } 
     
     .menu .logo-toggle {
@@ -446,6 +446,57 @@ h1 {
         width: 100px; /* Make user image smaller */
         height: 100px;
     }
+
+
+
+    /* This is for the side menu*/
+    nav .nav-bar .sidebarOpen {
+        display: block;
+           }
+   
+    .menu {
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        left: -100%;
+        top: 0;
+        background-color: var(--side-nav);
+        padding: 20px;
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+nav.active .menu {
+    left: -0%
+}
+
+
+.menu .logo-toggle {
+display: block;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+    }
+
+.logo-toggle .sidebarClose {
+    color: var(--mode--switch-icons-color);
+    font-size: 24px;
+    cursor: pointer;
+            }
+
+.logo-toggle.active .sidebarClose{
+opacity: 1;
+pointer-events: auto;
+}    
+
+    .nav-bar .nav-links {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+    .nav-links li a {
+        display: block;
+        margin-top: 20px;
+    }
     }
 
 
@@ -497,54 +548,8 @@ h1 {
         margin-bottom: 20px;
       }
 
-    }
-    
-@media (max-width: 768px) {
-    nav .nav-bar .sidebarOpen {
-        display: block;
-           }
-   
-    .menu {
-        position: fixed;
-        height: 100%;
-        width: 320px;
-        top: 0;
-        left: -100%;
-        background-color: var(--side-nav);
-        padding: 20px;
-        z-index: 100;
-    }
 
-.menu .logo-toggle {
-    display: contents;
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: space-between;
-    }
-
-.logo-toggle .sidebarClose {
-    color: var(--mode--switch-icons-color);
-    font-size: 24px;
-    cursor: pointer;
-            }
-
-.logo-toggle.active .sidebarClose{
-opacity: 1;
-pointer-events: auto;
-}    
-
-    .nav-bar .nav-links {
-        flex-direction: column;
-        padding-top: 30px;
-    }
-    .nav-links li a {
-        display: block;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 430px) {
+    /* This the portion for the menu */
     nav .nav-bar .sidebarOpen {
         display: block;
            }
@@ -565,4 +570,6 @@ pointer-events: auto;
         display: block;
         margin-top: 20px;
     }
-}
+
+    }
+    
