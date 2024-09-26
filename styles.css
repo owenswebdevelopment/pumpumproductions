@@ -551,9 +551,6 @@ pointer-events: auto;
 
     /* This the portion for the menu */
     
-
-
-
     nav .nav-bar .sidebarOpen {
         display: block;
            }
@@ -600,7 +597,6 @@ pointer-events: auto;
     .nav-links li a {
         display: block;
         margin-top: 20px;
-    }
     }
     }
     

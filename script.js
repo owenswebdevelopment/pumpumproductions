@@ -76,9 +76,13 @@ if(getMode && getMode === "dark-mode"){
     nav.classList.toggle("active");
   });
 
-body.addEventListener("click", (e) => {
-  let clickedElm = e.target;
-   if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("sidebarClose")){
-    nav.classList.remove("active");
-   }
-})
+  body.addEventListener("click", (e) => {
+    let clickedElm = e.target;
+    // Check if the clicked element is not the sidebarOpen, menu, or nav-link
+    if (!clickedElm.classList.contains("sidebarOpen") && 
+        !clickedElm.closest('.menu') && 
+        !clickedElm.closest('.nav-links')) {
+      nav.classList.remove("active");
+    }
+  });
+  
