@@ -553,8 +553,8 @@ pointer-events: auto;
     
     nav .nav-bar .sidebarOpen {
         display: block;
-        padding: 3px;
-        font-size: 15px;
+        padding: 10px;
+        font-size: 26px;
            }
  
     .menu {
