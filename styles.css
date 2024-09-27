@@ -332,7 +332,7 @@ h1 {
     overflow: hidden;
     margin-right: 15px;
     margin-bottom: 40px;
-    border: 3px solid var();
+    border: 3px solid var(--h1--text-color);
     padding: 3px;
 }
 .card-list .card-item .user-image img {
@@ -349,7 +349,7 @@ h1 {
 
 .card-list .card-item .message-button {
     padding: 10px 20px;
-    background-color: #f4f4f4;
+    background-color: var(--text-color);
     border-radius: 5px;
     font-size: 1.2rem;
     font-weight: 400;
