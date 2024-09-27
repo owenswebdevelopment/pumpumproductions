@@ -553,10 +553,11 @@ pointer-events: auto;
     
     nav .nav-bar .sidebarOpen {
         display: block;
-        padding: 10px;
-        font-size: 40px;
+        
            }
- 
+           nav .nav-bar {    
+            padding: 10px;
+        }
     .menu {
         position: fixed;
         height: 100%;
