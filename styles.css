@@ -146,9 +146,9 @@ nav {
 .darkLight-searchBox .dark-light, .searchBox {
     height: 40px;
     width: 40px;
-    padding: 0 10px;
+    padding: 0 5px;
     margin: 0 5px;
-    color: #f5f5f5;
+    color: var(--mode--switch-icons-color);
     font-size: 16px;
     display: flex;
     align-items: center;
@@ -390,12 +390,12 @@ h1 {
     color:rgb(195, 255, 0);
 }
 
-@media (max-width: 768px){
+@media (max-width: 798px){
 
 
-    .paragraph-container, .slider-wrapper {
+    .paragraph-container{
         max-height: 50vh;
-        overflow-y: auto;
+        overflow: auto;
     }
 
     .slider-wrapper {
@@ -452,8 +452,11 @@ h1 {
     /* This is for the side menu*/
     nav .nav-bar .sidebarOpen {
         display: block;
+        padding: 10px;
            }
-   
+    nav .nav-bar {
+        padding: 10px;
+    }    
     .menu {
         position: fixed;
         height: 100%;
@@ -476,6 +479,7 @@ width: 100%;
 display: flex;
 align-items: center;
 justify-content: space-between;
+
     }
 
 .logo-toggle .sidebarClose {
