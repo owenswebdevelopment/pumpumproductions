@@ -10,8 +10,8 @@
     font-family: "Roboto", sans-serif;
 }
 :root {
-    --nav-color: rgb(195, 255, 0);       /* Navigation bar color */
-    --side-nav: rgb(0, 0, 0);            /* Side navigation color */
+    --nav-color: #54F91E;       /* Navigation bar color */
+    --side-nav: #54F91E;            /* Side navigation color */
     --text-color: #ffffff;                 /* Text color */
     --logo-color: rgb(238, 127, 127);      /* Logo color */
     --slide-color: rgb(255, 255, 255);     /* Slide background color */
@@ -213,7 +213,7 @@ pointer-events: auto;
     position: absolute;
     bottom: -80px;
     right: 8px;
-    background-color: var(--nav-color);
+    background-color:var(--h1--text-color);
     height: 40px;
     width: 200px;
     display: flex;
@@ -238,10 +238,10 @@ padding: 0 45px 0 15px;
 outline: none;
 border: none;
 border-radius: 6px;
-color: var(--text-color);
+color: var(--search-text-color);
 font-size: 16px;
 font-weight: 500;
-background-color: var(--side-nav);
+background-color: var(--slide-color);
 }
 
 .search-field::before {
@@ -409,15 +409,27 @@ h2.user-name {
     .logo-side{
         display: none;
     }
-    
+    .searchBox.active .search-field {
+        left: 10px;
+        pointer-events: auto;   
+        }
+        .search-field::before {
+            content: '';
+            position:absolute;
+            left: 10px;
+            top: -4px;
+            height: 26px;
+            background-color: var(--dots-icon-color);
+            }
+
     .paragraph-container{
         max-height: 50vh;
         overflow: auto;
     }
 
-    .slider-wrapper {
+    /* .slider-wrapper {
         margin: 0;
-    }
+    } */
     .slider-wrapper .card-list{
         width: 30%; /* Reduce width for mobile */
         padding: 10px; /* Add padding for spacing */
@@ -469,7 +481,7 @@ h2.user-name {
     /* This is for the side menu*/
     nav .nav-bar .sidebarOpen {
         display: block;
-        padding: 40px;
+        padding: 20px;
            }
     nav .nav-bar {
         padding: 10px;
@@ -612,10 +624,6 @@ pointer-events: auto;
         transition: all 0.4s ease;
     }
 
-    .menu .darkLight-searchBox {
-        /* box-sizing: border-box;  */
-        /* margin-left: 80px;  */
-        } 
 
 nav.active .menu {
     left: -0%
@@ -656,5 +664,18 @@ pointer-events: auto;
         display: block;
         margin-top: 20px;
     }
+
+    .nav-bar {
+        position: relative;
+        /* height: 100vh; */
+    }
+    .darkLight-searchBox {
+        position: absolute;
+       margin-top: 100%;
+       /* display: flex; */
+    }
+    .darkLight-searchBox .dark-light, .searchToggle {
+     margin-left: -90%;
+}
     }
     
