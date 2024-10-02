@@ -78,11 +78,26 @@ if(getMode && getMode === "dark-mode"){
 
   body.addEventListener("click", (e) => {
     let clickedElm = e.target;
-    // Check if the clicked element is not the sidebarOpen, menu, or nav-link
+    // Check if the clicked element is not the sidebarOpen, menu, nav-link, or searchBox
     if (!clickedElm.classList.contains("sidebarOpen") && 
         !clickedElm.closest('.menu') && 
-        !clickedElm.closest('.nav-links')) {
+        !clickedElm.closest('.nav-links') && 
+        !clickedElm.closest('.search-field')) {  // Prevents closing when clicking inside search
       nav.classList.remove("active");
+      searchBoxToggle.classList.remove("active");  // Closes search box only when clicking outside it
     }
   });
+
+  
+
+// Keep the search box active when the input is focused
+searchInput.addEventListener("focus", () => {
+  searchBoxToggle.classList.add("active");
+});
+
+// Keep the search box open when typing in the search field
+searchInput.addEventListener("input", () => {
+  searchBoxToggle.classList.add("active");
+});
+
   

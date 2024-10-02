@@ -221,8 +221,9 @@ pointer-events: auto;
     padding: 3px;
     border-radius: 6px;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: auto;
     transition: all 0.2s ease-in;
+  
 }
 
 .searchBox.active .search-field {
@@ -674,8 +675,10 @@ pointer-events: auto;
     }
     .darkLight-searchBox {
         position: absolute;
-   margin-bottom: 50px;
+        margin-bottom: 50px;
+        /* overflow-x: auto; */
     }
+
     .searchToggle .search-field {
         transition: none;
     }
