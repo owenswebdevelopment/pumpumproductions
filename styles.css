@@ -413,6 +413,7 @@ h2.user-name {
         left: 10px;
         pointer-events: auto;   
         }
+
         .search-field::before {
             content: '';
             position:absolute;
@@ -479,6 +480,7 @@ h2.user-name {
 
 
     /* This is for the side menu*/
+
     nav .nav-bar .sidebarOpen {
         display: block;
         padding: 20px;
@@ -542,9 +544,9 @@ pointer-events: auto;
     }
     .darkLight-searchBox .dark-light, .searchToggle {
      margin-left: -90%;
-}
-   
-    }
+} 
+}   
+    
 
     
 
@@ -622,11 +624,12 @@ pointer-events: auto;
         padding: 20px;
         z-index: 100;
         transition: all 0.4s ease;
+        overflow-y:auto;
     }
 
 
 nav.active .menu {
-    left: -0%
+    left: 0%
 }
 
 
@@ -671,11 +674,24 @@ pointer-events: auto;
     }
     .darkLight-searchBox {
         position: absolute;
-       margin-top: 100%;
-       /* display: flex; */
+   margin-bottom: 50px;
     }
-    .darkLight-searchBox .dark-light, .searchToggle {
-     margin-left: -90%;
-}
+    .searchToggle .search-field {
+        transition: none;
+    }
+    
+    .searchBox.active .search-field {
+        bottom: 70;
+        opacity: 1; 
+        pointer-events: auto;   
+        }
+ 
+.darkLight-searchBox .searchToggle {
+ margin-left: -0%;
+} 
+
+/* .searchToggle .searchBox.active .search-field {
+    margin-bottom: 30px;
+} */
     }
     
